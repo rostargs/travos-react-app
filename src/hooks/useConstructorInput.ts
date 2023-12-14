@@ -32,7 +32,7 @@ export const useConstructorInput = <T extends { [key: string]: string }>(
       ...prev,
       [name]: {
         ...prev[name],
-        value: value,
+        value: value.trim(),
       },
     }));
   };
@@ -44,13 +44,13 @@ export const useConstructorInput = <T extends { [key: string]: string }>(
 
   const onChangeQuestionInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     handleChangeInput(event);
-    dispatch(saveQuestionValue({ id: id, value: event.target.value }));
+    dispatch(saveQuestionValue({ id: id, value: event.target.value.trim() }));
     dispatch(setErrorValue({ questionID: id, value: checkValidation(event), type: "question" }));
   };
 
   const onChangeSimpleAnswerInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     handleChangeInput(event);
-    dispatch(saveSimpleAnswerValue({ id, value: event.target.value }));
+    dispatch(saveSimpleAnswerValue({ id, value: event.target.value.trim() }));
     dispatch(setErrorValue({ questionID: id, value: checkValidation(event), type: "answers" }));
   };
 

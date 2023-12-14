@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import CustomLink from "../ui/CustomLink";
 import { links } from "../data/links";
 import { FaRegUserCircle } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
 import Button from "../ui/Button";
 import { RootState, useAppDispatch, useAppSelector } from "../app/store";
 import { auth } from "../firebase";
@@ -41,7 +40,7 @@ const Navigation: React.FC = () => {
   return (
     <>
       <nav className="navigation">
-        <GiHamburgerMenu className={togglerClasses} onClick={onToggleMenu} />
+        <div className={togglerClasses} onClick={onToggleMenu} />
         <Link to="/" className="navigation__logo">
           Travos
         </Link>

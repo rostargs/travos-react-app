@@ -20,9 +20,20 @@
     font-size: 2.6rem;
     cursor: pointer;
     z-index: inherit;
+    transition: background-image 0.35s ease-in;
 
     @media screen and (max-width: 768px) {
       display: block;
+      background-image: url("../../public/burgerImage.svg");
+      background-position: center;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &--active {
+        background-image: url("../../public/timesImage.svg");
+      }
     }
   }
 
