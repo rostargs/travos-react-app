@@ -1,0 +1,27 @@
+.control {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+
+  & > div {
+    padding: 0.7rem;
+    background-color: var(--grey-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in;
+  }
+
+  & > p {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: var(--grey-dark);
+  }
+
+  &:hover > div {
+    transform: scale(0.9);
+  }
+}

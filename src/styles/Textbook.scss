@@ -1,0 +1,40 @@
+.textbook {
+  font-family: "Dela Gothic One";
+  padding-top: 4rem;
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.6rem 2rem;
+    background-color: var(--white);
+    border-radius: 1.4rem;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.6rem;
+    color: var(--dark);
+
+    &:before {
+      content: "";
+      background: url("../../public/hat.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  &__words {
+    padding-top: 2rem;
+    display: grid;
+    gap: 4rem 2rem;
+
+    @media screen and (max-width: 720px) {
+      grid-template-columns: 1fr !important;
+      gap: 2rem;
+    }
+  }
+}

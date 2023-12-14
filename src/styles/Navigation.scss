@@ -1,0 +1,123 @@
+.navigation {
+  padding: 3.3rem 0;
+  box-shadow: 0 -0.1rem 0 0 var(--grey-medium) inset;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--grey-light);
+  z-index: 777;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
+
+  &__toggle-menu {
+    display: none;
+    font-size: 2.6rem;
+    cursor: pointer;
+    z-index: inherit;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--black);
+    z-index: inherit;
+
+    &::after {
+      content: "";
+      width: 0.1rem;
+      background-color: var(--grey-medium);
+      margin: 0.4rem 3rem;
+      border-radius: 0.8rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--white);
+      opacity: 0;
+      inset: 0;
+      transform: translateY(-150vh);
+      z-index: 666;
+      overflow: hidden;
+
+      &--active {
+        transform: translate(0);
+        opacity: 1;
+      }
+
+      & li > a {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: inherit;
+
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &_logo {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &_name {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--grey-dark);
+
+      @media screen and (max-width: 468px) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+      & > a {
+        display: none;
+      }
+    }
+  }
+}

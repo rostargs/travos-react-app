@@ -1,0 +1,39 @@
+.hero-statistic {
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+  font-family: "Dela Gothic One", sans-serif;
+  gap: 6rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &_text {
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      color: var(--grey);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    span {
+      font-size: 4rem;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 3.2rem;
+      }
+
+      &::after {
+        content: "+";
+        font-weight: 700;
+        color: var(--cyan-dark);
+      }
+    }
+  }
+}

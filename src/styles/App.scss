@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --cyan-dark: #2b788b;
+  --cyan-light: #c3dce3;
+  --pink-dark: #945069;
+  --pink-light: #f2d4dc;
+  --dark: #000000;
+  --grey-light: #f6f5f4;
+  --grey-medium: #e0e0e0;
+  --grey-icon: #bababa;
+  --grey-dark: #585858;
+  --cyan: #5996a5;
+  --green: #639b6d;
+  --pink: #a15993;
+  --red: #a95151;
+  --yellow: #c4a24c;
+  --orange: #cb5b43;
+  --white: #fff;
+  --grey: #757575;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--grey-light);
+}
+
+input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 5px;
+  }
+}

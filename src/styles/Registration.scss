@@ -1,0 +1,89 @@
+.registration {
+  background-color: var(--white);
+  position: relative;
+
+  &__back {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &-container {
+    max-width: 1520px;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1020px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__image {
+    background-image: url("../../public/registration.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: 1020px) {
+      background-image: none;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    font-family: "Smooch Sans", sans-serif;
+
+    & > h1 {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      font-size: 12rem;
+      font-weight: 700;
+
+      &::after {
+        content: "We are glad to see you back with us";
+        position: absolute;
+        bottom: 0;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--grey-dark);
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    & > div {
+      width: 100%;
+      padding: 2.4rem 7rem;
+
+      @media screen and (max-width: 720px) {
+        padding: 2.4rem;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    background-image: url("../../public/sun-vector.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 14rem;
+    height: 14rem;
+    left: 0;
+    bottom: 6rem;
+  }
+}

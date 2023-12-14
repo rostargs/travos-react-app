@@ -1,0 +1,44 @@
+.constructor-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  flex-shrink: 1;
+
+  &--error {
+    border: 0.1rem solid var(--red) !important;
+  }
+
+  & > label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cyan);
+    text-align: left;
+    padding-bottom: 1rem;
+  }
+
+  & > input {
+    border-radius: 2rem;
+    border: 0.1rem solid var(--grey-medium);
+    padding: 0.7rem 1.2rem;
+    font-size: 1.5rem;
+    color: var(--grey-dark);
+    font-family: inherit;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+    &::placeholder {
+      font-family: "Montserrat";
+    }
+  }
+
+  &__error {
+    position: absolute;
+    color: var(--red);
+    font-family: "Dela Gothic One";
+    font-size: 1.2rem;
+  }
+}

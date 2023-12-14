@@ -1,0 +1,53 @@
+.upload-image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  & > input {
+    display: none;
+  }
+
+  &__label {
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--grey-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+
+    &--choosed {
+      background-color: var(--green);
+
+      & svg {
+        color: var(--white);
+      }
+    }
+    &--error {
+      background-color: var(--red);
+
+      & svg {
+        color: var(--white);
+      }
+    }
+  }
+
+  &__preview {
+    visibility: hidden;
+    position: absolute;
+    min-width: 20rem;
+    min-height: 20rem;
+    top: 120%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    z-index: 888;
+  }
+
+  &:hover &__preview {
+    visibility: visible !important;
+    opacity: 1;
+  }
+}

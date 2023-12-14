@@ -1,0 +1,14 @@
+.test-list {
+  display: grid;
+  align-items: stretch;
+  padding: 2rem 0;
+  gap: 2rem;
+
+  @media screen and (max-width: 1020px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

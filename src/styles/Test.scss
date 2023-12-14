@@ -1,0 +1,25 @@
+.test {
+  margin: 2rem;
+  padding: 4rem;
+  border-radius: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--white);
+
+  &__name {
+    font-size: 2.4rem;
+    color: var(--cyan-dark);
+  }
+
+  &__tests {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+}
