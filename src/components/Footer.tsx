@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
         </Link>
       </nav>
       <div className="footer__social-links">
-        <ul className="footer__company-logos">
+        {/* <ul className="footer__company-logos">
           {logos.map((logo, index) => {
             return (
               <li key={index}>
@@ -35,7 +35,8 @@ const Footer: React.FC = () => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
+        <span className="footer__support">bodnarooksandr@gmail.com</span>
         <span className="footer__project">©2023 Travos. Project for Travos.</span>
       </div>
     </footer>

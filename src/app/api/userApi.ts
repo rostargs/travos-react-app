@@ -3,6 +3,7 @@ import { db } from "../../firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { TResult, TUser } from "../../models/user.module";
 import { ApiResponse } from "../../models/word.module";
+import { insertionSort } from "../../utils/insertionSort";
 
 export type TAddWord = {
   userID: string;
@@ -37,7 +38,8 @@ export const userApi = createApi({
         try {
           const textbookRef = doc(db, "users", userID);
           const userData = (await getDoc(textbookRef)).data() as TUser;
-          return { data: userData.textbook };
+          const sortedTexbook = insertionSort(userData.textbook);
+          return { data: sortedTexbook };
         } catch (error: any) {
           return { error: error.message };
         }
