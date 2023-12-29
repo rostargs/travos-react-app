@@ -3,13 +3,13 @@ import { links } from "../data/links";
 import { mapLinks } from "../utils/mapLinks";
 import CustomLink from "../ui/CustomLink";
 import "../styles/Footer.scss";
-import Reddit from "../../public/reddit.svg";
-import YouTube from "../../public/youtube.svg";
-import GT from "../../public/GT.svg";
+// import Reddit from "../../public/reddit.svg";
+// import YouTube from "../../public/youtube.svg";
+// import GT from "../../public/GT.svg";
 import { Link } from "react-router-dom";
 
 const footerLinks = mapLinks(links);
-const logos = Array.from([Reddit, YouTube, GT]);
+// const logos = Array.from([Reddit, YouTube, GT]);
 
 const Footer: React.FC = () => {
   return (
