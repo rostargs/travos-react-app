@@ -42,7 +42,7 @@ const Navigation: React.FC = () => {
       <nav className="navigation">
         <div className={togglerClasses} onClick={onToggleMenu} />
         <Link to="/" className="navigation__logo">
-          Travos
+          {import.meta.env.VITE_PROJECT_NAME}
         </Link>
         <ul className={listClasses}>
           {renderListContent}

@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           ))}
         </ul>
         <Link to="/">
-          <h1 className="footer__logo">Travos</h1>
+          <h1 className="footer__logo">{import.meta.env.VITE_PROJECT_NAME}</h1>
         </Link>
       </nav>
       <div className="footer__social-links">
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
           })}
         </ul> */}
         <span className="footer__support">bodnarooksandr@gmail.com</span>
-        <span className="footer__project">©2023 Travos. Project for Travos.</span>
+        <span className="footer__project">©2023 Travos. Project for {import.meta.env.VITE_PROJECT_NAME}.</span>
       </div>
     </footer>
   );
